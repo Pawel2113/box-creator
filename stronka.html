@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Jaki człowiek taki kolor</title>
+	<meta name="description" content="Serwis zapisuje imię, nazwisko i kolor, jaki osoba podała"/>
+	<meta name="keywords" content="kolor, ulubione, barwy, najlepsze, ciekawsze"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<link rel="stylesheet" href="style1.css" type="text/css" />
+	<script type="text/javascript" src="logic.js"></script>
+	<style>
+	
+</style>
+	
+</head>
+
+<body>
+
+	<div id="container">
+	
+		<div id="logo">
+			<h1>Wybierz swój kwadrat</h1>
+		</div>
+		
+		<div class="content">
+			<div class="square">
+				<div class="rectangle">Podaj imie: </div>
+				<div class="rectangle">Podaj wiek: </div>
+				<div class="rectangle">Wybierz kolor: </div>
+				<div class="rectangle">Rozmiar: </div>
+			</div>
+			<div class="square">
+				<div class="rectangle">
+					<input type="text" id="tekst1" placeholder="imie"/>
+				</div> 
+				<div class="rectangle">
+					<input type="text" id="tekst2" placeholder="wiek"/>
+				</div> 
+				<div class="rectangle">
+					<div class="dropdown">
+						<button class="dropbtn"><input type="text" id="kolorowy" placeholder = "brak"/>
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<div class="option">
+								<label  onclick="zielony()">zielony</label>
+							</div>
+							<div class="option">
+								<label  onclick="niebieski()">niebieski</label>
+							</div>
+							<div class="option">
+								<label  onclick="czerwony()">czerwony</label>
+							</div>
+							<div class="option">
+								<label  onclick="zolty()">żółty</label>
+							</div>
+						</div>
+					</div> 
+				</div> 
+				<div class="rectangle">
+					<label><input type="radio" name="size" id="size1" value="S" onclick="maly()" checked/>S</label>
+					<label><input type="radio" name="size" id="size2" value="M" onclick="sredni()"/> M</label>
+					<label><input type="radio" name="size" id="size3" value="L" onclick="duzy()"/> L</label>
+					<label><input type="radio" name="size" id="size4" value="XL" onclick="bardzo_duzy()"/> XL</label>
+					
+				</div> 
+				<div class="rectangle">
+					<input type="submit" value="Zapisz" onclick="zapisz()"/>
+					<input type="submit" value="Wyslij" onclick="wyslij()"/>
+				</div> 
+			</div>
+				<div id="list">
+				 <table style="width:100%">
+					  <tr>
+						<th>Imie</th>
+						<th>Wiek</th> 
+						<th>Kolor</th>
+						<th>Rozmiar</th>
+						<th>Wizualizaja</th>
+					  </tr>
+					   <form action="Order" method="post">
+					  <tr id="line1" style="text-align:center;">
+					  </tr>
+					  <tr id="line2" style="text-align:center;">
+					  </tr>
+					  <tr id="line3" style="text-align:center;">
+					  </tr>
+					  <tr id="line4" style="text-align:center;">
+					  </tr>
+					  <tr id="line5" style="text-align:center;">
+					  </tr>
+					  </form>
+					</table>
+				</div>
+		</div>
+		<div class="content">
+			<div id="field_picture1">
+				<div id="label" >Twój produkt</div>
+			</div>
+			<div id="field_picture2">
+			
+			</div>
+		</div>
+		<div id="footer">
+			Najlepsze kolorowe kwadraty - Stwórz je sam! &copy; Wszelkie prawa zastrzeżone
+		</div>
+	
+	</div>
+
+</body>
+</html>

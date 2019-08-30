@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Jaki człowiek taki kolor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+	<meta name="description" content="Serwis zapisuje imię, nazwisko i kolor, jaki osoba podała"/>
+	<meta name="keywords" content="kolor, ulubione, barwy, najlepsze, ciekawsze"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<link rel="stylesheet" href="style1.css" type="text/css" />
+	<script type="text/javascript" src="logic.js"></script>
+    </head>
+    <body>
+        <div id="container">
+	
+		<div id="logo">
+			<h1>Wybór koloru</h1>
+		</div>
+		
+		<div id="content">
+			<div class="square">
+				<div class="rectangle">Podaj imie: </div>
+				<div class="rectangle">Podaj nazwisko: </div>
+				<div class="rectangle">Wybierz kolor: </div>
+				<div class="rectangle">Rozmiar: </div>
+			</div>
+			<div class="square">
+				<div class="rectangle">
+					<input type="text"  id="tekst1" placeholder="imie"/>
+				</div> 
+				<div class="rectangle">
+					<input type="text"  id="tekst2" placeholder="nazwisko"/>
+				</div> 
+				<div class="rectangle">
+					<div class="dropdown">
+						<button class="dropbtn"><input type="text" id="kolorowy" placeholder = "brak"/>
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<div class="option">
+								<label  onclick="zielony()">zielony</label>
+							</div>
+							<div class="option">
+								<label  onclick="niebieski()">niebieski</label>
+							</div>
+							<div class="option">
+								<label  onclick="czerwony()">czerwony</label>
+							</div>
+							<div class="option">
+								<label  onclick="zolty()">żółty</label>
+							</div>
+						</div>
+					</div> 
+				</div> 
+				<div class="rectangle">
+					<label><input type="radio" name="size1" id="size1" value="S"/>S</label>
+					<label><input type="radio" name="size2" id="size2" value="M"/> M</label>
+					<label><input type="radio" name="size3" id="size3" value="L"/> L</label>
+					<label><input type="radio" name="size4" id="size4" value="XL"/> XL</label>
+					
+				</div> 
+				<div class="rectangle">
+					<input type="submit" value="Zapisz" onclick="zapisz()"/>
+					
+				</div> 
+			</div>
+				<div class="square">
+					<div class="rectangle">
+						<div id="imie2"></div>
+					</div>
+					<div class="rectangle">
+						<div id="nazwisko2"></div>
+					</div>
+					<div class="rectangle">
+						<div id="kolor2"></div>
+					</div>
+					<div class="rectangle">
+						<div id="rozmiar2"></div>
+					</div>
+				</div>
+                    
+			<div class="square">
+                            <form action="Order" method="post">
+				<div class="rectangle">
+					<div id="imie"name="fname"></div>
+				</div>
+				<div class="rectangle" >
+					<div id="nazwisko" name="sname"></div>
+				</div>
+				<div class="rectangle">
+					<div id="kolor" name="color"></div>
+				</div>
+				<div class="rectangle">
+					<div id="rozmiar" name="size"></div>
+				</div>
+                            <input type="submit" value="Wyślij" onclick="wyslij()"/>
+                            </form>
+			</div>
+		</div>
+		
+		<div id="footer">
+			Najlepsze seriale - TOP 5! &copy; Wszelkie prawa zastrzeżone
+		</div>
+	    
+
+	</div>
+
+    </body>
+</html>
