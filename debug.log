@@ -1,3 +1,0 @@
-[0315/164249.323:ERROR:process_info.cc(359)] UncheckedAllocate
-[0315/164249.419:ERROR:process_reader_win.cc(151)] SuspendThread: Odmowa dostêpu. (0x5)
-[0315/164249.420:ERROR:exception_snapshot_win.cc(88)] thread ID 11704 not found in process
